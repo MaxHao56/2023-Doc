@@ -1,14 +1,27 @@
-everything works as memory like linked list
-with formula of r + 4\*i and r starts at the starting point and i is the index of the list
+# Lecture Note 221 - L15
 
-later with structures & alignment with
-`unaligned data ` =![image](https://github.com/MaxHao56/2023-Documentaton/assets/132418186/176bc245-f275-48e5-9d66-acbeff1368cd)
+## Structures
 
-we use better alignment to use to find the memeory
+### Linked List Example {1.1}
 
-meaning if int = 4 then => then it should start or land on at the mutiple of 4 meaning 4k
+Since the compiler only understands the size and index we determine it using the memory pointer method {?} <br>
+The method we will be using to determine the information is to point to the $Contiguous Memory$<br>
 
-so there is initutive way and there is alignment way [noalign][align]
+![image](https://github.com/MaxHao56/2023-Documentaton/assets/132418186/07173cd0-8fc9-496d-94bf-bece29de4b71)<br>
+
+`Structure` - Block of Memory  &rarr; Computes with Equation `r + 4*i`<br>
+
+<br>
+<br>
+
+
+### Unalignment of Structure {1.2}
+
+This is to determine the size of the $Contiguous Memory$<br>
+
+`Addition` is the way to go <br>
+
+This chart below indicates the size of different types of data
 
 | Data Type      | Size (in bytes) on a 64-bit System |
 | -------------- | ---------------------------------- |
@@ -28,9 +41,37 @@ so there is initutive way and there is alignment way [noalign][align]
 | double         | 8                                  |
 | long double    | 16                                 |
 | pointers       | 8 (on most 64-bit systems)         |
-| structures     | Size depends on the members        |
-| arrays         | Size depends on element type and   |
-|                | number of elements                 |
+
+<br>
+<br>
+
+### Alignment of Structure {1.3}
+
+The Alignment fills $Gaps$<br>
+The Alignment Takes the Largest Type of Bytes(K) And points using the $K*$<br>
+
+![image](https://github.com/MaxHao56/2023-Documentaton/assets/132418186/5132077f-5fd7-4d22-a29e-e1ebbc622def)<br>
+![image](https://github.com/MaxHao56/2023-Documentaton/assets/132418186/be9f5934-5c27-43dc-9260-ae98f87d581b)<br>
+
+This shows how it stores each line in the struct<br>
+An array of the struct is struct followed by an array with index &rarr; 
+
+
+
+
+# Question
+- [ ] At Linked List 1.1. What does pdf mean with the entire program? Understand the program.
+- [ ] 
+
+
+
+
+
+
+meaning if int = 4 then => then it should start or land on at the mutiple of 4 meaning 4k
+
+so there is initutive way and there is alignment way [noalign][align]
+
 
 for alignment find the largest of alignment byte = K and have to be mutiple of K
 
