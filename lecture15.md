@@ -54,8 +54,11 @@ The Alignment Takes the Largest Type of Bytes(K) And points using the $K*$<br>
 ![image](https://github.com/MaxHao56/2023-Documentaton/assets/132418186/be9f5934-5c27-43dc-9260-ae98f87d581b)<br>
 
 This shows how it stores each line in the struct<br>
-An array of the struct is struct followed by an array with index &rarr; r + K*i`<br>
+An array of the struct is struct followed by an array with index &rarr; r + K*i`<be>
 
+Saving Space by putting large data types first
+
+## Structures
 
 
 
